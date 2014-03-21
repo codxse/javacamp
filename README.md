@@ -1,1 +1,1 @@
-Arsip-arsip tugas matakuliah bahasa pemrograman Java
+Arsip-arsip tugas mata kuliah bahasa pemrograman Java
