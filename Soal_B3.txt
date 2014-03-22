@@ -1,0 +1,17 @@
+Soal 1
+-------------
+Seorang pegawai memiliki gaji pokok Rp. 1.000.000,-, dengan tunjangan keluarga 20% dari gaji pokok, tunjangan anak 5% per anak dari gaji pokok. Dia memiliki 3 anak. Dia wajib membayar pajak sebesar 15%. Hitunglah:
+1. Gaji kotor
+2. Pajak penghasilan
+3. Gaji Bersih
+
+Outputkan dalam formating ID rata kanan!.
+
+Soal 2
+-------------
+Hitunglah lama waktu rental komputer, harga rental per jam adalah Rp. 5000,-
+Dengan asumsi sebagai berikut:
+Jam masuk: 9.50
+Jam keluar: 12.30
+
+Sehingga didapatkan output X jam Y menit (x,x jam), dengan biaya Rp. Z,-
