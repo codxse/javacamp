@@ -1,6 +1,6 @@
 package pertemuan_3;
 
-class Titik {
+public class Titik {
 	// attribut
 	double x, y;
 	
