@@ -12,14 +12,17 @@ public class Nilai {
 	}
 	
 	public void setQuis(double nilai) {
-		Quis = nilai;
+		if (nilai >= 0 && nilai <= 100) 
+			Quis = nilai;
 	}
 	
 	public void setUTS(double nilai) {
-		UTS = nilai;
+		if (nilai >= 0 && nilai <= 100) 
+			UTS = nilai;
 	}
 	
 	public void setUAS(double nilai) {
-		UAS = nilai;
+		if (nilai >= 0 && nilai <= 100) 
+			UAS = nilai;
 	}
 }
