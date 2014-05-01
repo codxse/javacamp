@@ -25,4 +25,35 @@ public class Nilai {
 		if (nilai >= 0 && nilai <= 100) 
 			UAS = nilai;
 	}
+	
+	public char getIndex() {
+		double NA = getNA();
+		if (NA >= 0 && NA <= 45)
+			return 'E';
+		else if (NA <= 56)
+			return 'B';
+		else if (NA <= 68)
+			return 'C';
+		else if (NA <= 80)
+			return 'B';
+		else
+			return 'A';
+	}
+	
+	public String getKeterangan() {
+		char idx = getIndex();
+		
+		switch(idx) {
+			case 'A':
+				return "Sangat Baik";
+			case 'B':
+				return "Baik";
+			case 'C':
+				return "Cukup";
+			case 'D':
+				return "Kurang";
+			default:
+				return "Sangat Kurang";
+		}
+	}
 }
