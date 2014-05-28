@@ -68,32 +68,9 @@ public class MyQueueArray {
 		else
 			return false;
 	}
-	/**
-	 * terdepat will return front/first queue;
-	 * @return the first list.
-	 */
+
 	public int terdepan() {
 		return queue[front];
 	}
-	
-	/*
-	public void balikurutan() {
-		int[] temp;
-		temp = new int[maks];
-		int j = this.i;
-		
-		for (int i = 0; i <= j; i++, j--) {
-			temp[i] = queue[j];
-		}
-		
-		for (int i = 0; i <= this.i; i++) {
-			queue[i] = temp[i];
-		}
-	}
-	
-	public int banyak() {
-		return maks;
-	}
-	*/
 
 }
