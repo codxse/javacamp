@@ -1,94 +1,69 @@
 package prolan10111121;
-/**
- * 
- * @author nadiar
- * MyQueueArray is class of Queue array int data type
- * this queue array not yet perfect still a lot of bugs
- */
+
 public class MyQueueArray {
 	
 	private int[] queue;
 	private int maks;
-	private int j = 0, i = 0, iPrint;
+	private int front = -1, rear = -1;
 	
-	/**
-	 * Default constructor which constuct new int arrayQueue whith int argument as parameter 
-	 * the class is MyQueueArray
-	 * Construct:
-	 * we want create new object of this class called "antrian"
-	 * MyQueueArray antrian = new MyQueueArray(argumen);
-	 */
 	public MyQueueArray(int maks) {
-		/**
-		 * maks is the maximum elemen of array
-		 */
+
 		queue = new int[maks];
 		this.maks = maks;
 	}
-	/**
-	 * To enqueue the queue just create antrian.enqueue(argument);
-	 * Please nore "antrian" is just object that we created before.
-	 */
+
 	public void enqueue(int x) {
 
-		if (i < maks) {
-			queue[this.i] = x;
-			System.out.println(queue[i] + " berhasil dimasukan ke antrian " + (i));
-			i++;
+		if ((front == 0) && (rear == maks-1))
+			System.out.println("Queue penuh!");
+		else {
+			if ((front == -1) || (rear == -1))
+				front = rear = 0;
+			else if (rear == maks-1)
+				System.out.println("Queue penuh!");
+			else 
+				rear += 1;
+			
+			queue[rear] = x;
 		}
 		
-		iPrint = i;
-		
-		if (i == maks)
-			i = 0;
-		
 	}
-	/**
-	 * To dequeue the queue just create antrian.dequeue();
-	 * No argument here for dequeue, just lave it ().
-	 * the number 999999999 is to indicate that the element is null
-	 * As we can't sign null to array. We just create array of int (primitive data type) not array of Object.
-	 * @return first element of array
-	 */
+
 	public int dequeue() {
-		int temp = queue[j];
-		//Integer intObj = new Integer(j);
-		queue[j] = 999999999; j++; // 999999999 menandakan antrian kosong
+		int temp = queue[0];
 		
-		
-		if (j == maks)
-			j = 0;
+		if ((front == -1) && (rear == -1))
+			return 999999999;
+		else {
+			if (front != rear) {
+				for (int i = 0; i < rear; i++) {
+					queue[i] = queue[i+1];
+				}
+				rear -= 1;
+			} else {
+				front = rear = -1;
+			}
+		}
 		
 		return temp;
 	}
-	/**
-	 * (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 * toString() to print all the element of array
-	 * It will return String of element array.
-	 * @return String of list of element of Array
-	 */
+
 	public String toString() {
 		String temp = "";
 		
-		for (int j = this.j; j < iPrint; j++) {
-			temp += Integer.toString(queue[j]) + ", ";
-		}
+		if ((front != -1) && (rear != -1)) {
+			for (int i = front; i <= rear; i++) {
+				temp += Integer.toString(queue[i]) + ", ";
+			}
+		} else
+			temp = "Kosong!";
 		
 		return "Antrian: " + temp;
 	}
-	/**
-	 * kosong() to indicate does the queue null or doesn't;
-	 * it will return true if null;
-	 * it will return false if not null;
-	 * @return true if the array is emphty and false if not.
-	 */
+
 	public boolean kosong() {
-		/**
-		 * if the first pointer (i) equals last pointer (j)
-		 * it will return true and false if doesn't
-		 */
-		if (j == i)
+		
+		if ((front == -1) && (rear == -1))
 			return true;
 		else
 			return false;
@@ -98,7 +73,7 @@ public class MyQueueArray {
 	 * @return the first list.
 	 */
 	public int terdepan() {
-		return queue[i];
+		return queue[front];
 	}
 	
 	/*
