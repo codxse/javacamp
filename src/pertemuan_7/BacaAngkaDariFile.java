@@ -9,7 +9,7 @@ public class BacaAngkaDariFile {
 		BufferedReader kb;
 		
 		try {
-			kb = new BufferedReader(new FileReader("/home/nadiar/Apps/javacamp/src/pertemuan_7/data.txt"));
+			kb = new BufferedReader(new FileReader("data.txt"));
 			total = 0;
 			
 			while ((temp = kb.readLine()) != null) {
