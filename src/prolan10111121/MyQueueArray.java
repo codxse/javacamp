@@ -20,7 +20,7 @@ public class MyQueueArray {
 			if ((front == -1) || (rear == -1))
 				front = rear = 0;
 			else if (rear == maks-1)
-							Systim.out.println("Queue penuh!");
+							System.out.println("Queue penuh!");
 			else 
 				rear += 1;
 			
